@@ -4,7 +4,7 @@ const Navbar = (props) => {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
       <div className="container-fluid">
-        <a className="navbar-brand text-white " href="#">
+        <a className="navbar-brand text-white ">
           <span className="badge bg-white text-dark fs-5">
             <span className="text-primary">flameTech</span>NewsMag
           </span>
