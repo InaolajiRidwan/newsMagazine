@@ -6,15 +6,13 @@ const NewsBoard = (props) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=9508b8e6de7b4bfeac010fdccf0e288f`;
+    let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=9508b8e6de7b4bfeac010fdccf0e288f`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setArticles(data.articles));
   }, [props.category]);
-  
 
-  
-
+  // &category=${props.category}&
 
   return (
     <div>
