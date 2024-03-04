@@ -5,31 +5,15 @@ import NewsItem from "./NewsItem";
 const NewsBoard = (props) => {
   const [articles, setArticles] = useState([]);
 
-  // useEffect(() => {
-  //   let url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=9508b8e6de7b4bfeac010fdccf0e288f`;
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => setArticles(data.articles));
-  // }, [props.category]);
-  
-
   useEffect(() => {
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=9508b8e6de7b4bfeac010fdccf0e288f`;
-
     fetch(url)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        return res.json();
-      })
-      .then((data) => setArticles(data.articles))
-      .catch((error) => {
-        // Handle the error here
-        console.error("Error fetching data:", error);
-        // Optionally, you can set an error state to display an error message in your component
-      });
+      .then((res) => res.json())
+      .then((data) => setArticles(data.articles));
   }, [props.category]);
+  
+
+  
 
 
   return (
