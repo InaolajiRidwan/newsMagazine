@@ -14,9 +14,9 @@ const NewsBoard = (props) => {
 
   return (
     <div>
-      <h2 className="text-center mt-3 sticky-top top-4">
+      <h2 className="text-center mt-3 ">
         <span className="text-primary">Latest</span>
-         <span className="badge bg-danger ms-2">News</span>
+        <span className="badge bg-danger ms-2">News</span>
       </h2>
       {articles.map((news, index) => {
         return (
