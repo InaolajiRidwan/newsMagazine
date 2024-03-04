@@ -1,15 +1,15 @@
 import React from "react";
-import image from "../assts/news.jpeg"
+import image from "../assts/news.jpeg";
 
-const NewsItem = ({src, title, description,url}) => {
+const NewsItem = ({ src, title, description, url }) => {
   return (
     <div
       className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 px-2 py-2"
       style={{ maxWidth: "310px" }}
     >
       <img
-        src={src? src : image}
-        style={{ height: "200px", width: "290px", border: "1px solid white"}}
+        src={src ? src : image}
+        style={{ height: "200px", width: "290px", border: "1px solid white" }}
         className="card-img-top"
         alt="..."
       />
