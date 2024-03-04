@@ -4,11 +4,11 @@ const Navbar = (props) => {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
       <div className="container-fluid">
-        <a className="navbar-brand text-white ">
+        <div className="navbar-brand text-white list-style-none ">
           <span className="badge bg-white text-dark fs-5">
             <span className="text-primary">flameTech</span>NewsMag
           </span>
-        </a>
+        </div>
         <button
           className="navbar-toggler bg-white "
           type="button"
