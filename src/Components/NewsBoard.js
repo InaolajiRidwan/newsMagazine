@@ -5,23 +5,14 @@ import NewsItem from "./NewsItem";
 const NewsBoard = (props) => {
   const [articles, setArticles] = useState([]);
 
-useEffect(() => {
-  let url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=9508b8e6de7b4bfeac010fdccf0e288f`;
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      if (Array.isArray(data.articles)) {
-        setArticles(data.articles);
-      } else {
-        // Handle the case when data.articles is not an array
-        console.error("Invalid data format: articles is not an array");
-      }
-    })
-    .catch((error) => {
-      // Handle fetch errors
-      console.error("Error fetching data:", error);
-    });
-}, [props.category]);
+  useEffect(() => {
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=9508b8e6de7b4bfeac010fdccf0e288f`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setArticles(data.articles));
+  }, [props.category]);
+  
+
   
 
 
